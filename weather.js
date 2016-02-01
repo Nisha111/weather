@@ -5,13 +5,14 @@ $(function() {
     // Put your code here to change the "markup" variable.
     // Don't change any other code in this file. You will be sad.
 
-    var markup = "<p>The current weather is  " + data.currently.summary + " and it is " + data.currently.apparentTemperature + " degrees" +
-     " degrees</p><p>The 3-day forecast is: <ul><li>Day 1: " + data.daily.data[1].summary +
-     "<li>Day 2: " + data.daily.data[2].summary + "with a high of " + data.daily.temperatureMax
-     "<li>Day 3: " + data.daily.data[3].summary +
-     "</ul>test</p>"
+    var markup = "<p><strong>Location:</strong> " + data.timezone + " </p> " + " <p><i>(All temperatures are in degrees Fahrenheit)</i></p> " +
+    "<p></p><p><h4>The current weather is  " + data.currently.summary + " and it is " + data.currently.apparentTemperature + " degrees</p></h4>" + data.currently.icon + 
+     " </p><p>The 3-day forecast is: <ul><li><strong>Day 1:</strong> " + data.daily.data[1].summary + "There will be a high of " + data.daily.data[1].temperatureMax + " and a low of " + data.daily.data[1].temperatureMin +
+     "<li><strong>Day 2:</strong> " + data.daily.data[2].summary + "There will be a high of " + data.daily.data[2].temperatureMax + " and a low of " + data.daily.data[2].temperatureMin +
+     "<li><strong>Day 3:</strong> " + data.daily.data[3].summary + " There will be a high of " + data.daily.data[3].temperatureMax + " and a low of " + data.daily.data[3].temperatureMin +
+     "</ul> </p>"
 
-
+// <font color="#FF0000>"Day 3:</strong></font>
     // End of your code
 
     $('.weather-report').html(markup);
